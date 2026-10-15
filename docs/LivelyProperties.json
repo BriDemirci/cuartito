@@ -1,0 +1,93 @@
+{
+  "ciudad": {
+    "type": "textbox",
+    "value": "Buenos Aires",
+    "text": "Ciudad (para el clima real)"
+  },
+  "clima": {
+    "type": "dropdown",
+    "value": 0,
+    "text": "Clima",
+    "items": [
+      "Real, según tu ciudad",
+      "Despejado",
+      "Nublado",
+      "Lluvia",
+      "Tormenta",
+      "Nieve",
+      "Niebla"
+    ]
+  },
+  "hora": {
+    "type": "dropdown",
+    "value": 0,
+    "text": "Hora del día",
+    "items": [
+      "Real",
+      "Siempre mañana",
+      "Siempre de día",
+      "Siempre atardecer",
+      "Siempre de noche"
+    ]
+  },
+  "gato": {
+    "type": "dropdown",
+    "value": 0,
+    "text": "Gato",
+    "items": [
+      "Naranja",
+      "Negro",
+      "Gris",
+      "Blanco",
+      "Siamés"
+    ]
+  },
+  "nombreGato": {
+    "type": "textbox",
+    "value": "Michi",
+    "text": "Nombre del gato"
+  },
+  "colorBuzo": {
+    "type": "color",
+    "value": "#e07a5f",
+    "text": "Color del buzo"
+  },
+  "luces": {
+    "type": "dropdown",
+    "value": 0,
+    "text": "Color de las luces",
+    "items": [
+      "Según la portada de la canción",
+      "Arcoíris",
+      "Un color fijo"
+    ]
+  },
+  "colorLuces": {
+    "type": "color",
+    "value": "#ff6ad5",
+    "text": "Color fijo de las luces"
+  },
+  "info": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Mostrar hora, clima y canción"
+  },
+  "h24": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Formato 24 horas"
+  },
+  "fahrenheit": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Temperatura en °F"
+  },
+  "sensibilidad": {
+    "type": "slider",
+    "value": 10,
+    "min": 2,
+    "max": 40,
+    "step": 1,
+    "text": "Sensibilidad al audio"
+  }
+}

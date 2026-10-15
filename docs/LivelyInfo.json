@@ -1,0 +1,14 @@
+{
+  "AppVersion": "1.0.0.0",
+  "Title": "cuartito · lofi room",
+  "Thumbnail": "thumbnail.jpg",
+  "Preview": "preview.gif",
+  "Desc": "Un cuarto lofi en pixel art con el clima real de tu ciudad, la hora del día y tu música. El gato baila, duerme y pide mimos.",
+  "Author": "BriDemirci",
+  "License": "MIT",
+  "Contact": "https://github.com/BriDemirci/cuartito",
+  "Type": 1,
+  "FileName": "index.html",
+  "Arguments": "--audio true --system-nowplaying true",
+  "IsAbsolutePath": false
+}

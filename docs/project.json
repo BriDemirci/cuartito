@@ -1,0 +1,185 @@
+{
+  "title": "cuartito · lofi room que vive con tu clima y tu música",
+  "description": "Un cuarto lofi en pixel art que vive con vos: por la ventana se ve el clima real de tu ciudad y la hora del día, las luces laten con tu música y en la pantalla aparece la canción que suena. El gato baila, duerme la siesta y te pide mimos (hacele clic). Activá la integración multimedia de Wallpaper Engine para ver la canción. Opcional: corré controles/instalar.bat para tener botones de música y que el gato se erice cuando la PC está exigida. Código: https://github.com/BriDemirci/cuartito",
+  "file": "index.html",
+  "preview": "preview.gif",
+  "type": "web",
+  "contentrating": "Everyone",
+  "tags": [
+    "Pixel art",
+    "Relaxing",
+    "Music"
+  ],
+  "visibility": "public",
+  "general": {
+    "supportsaudioprocessing": true,
+    "properties": {
+      "ciudad": {
+        "order": 0,
+        "text": "Ciudad (para el clima real)",
+        "type": "textinput",
+        "value": "Buenos Aires"
+      },
+      "clima": {
+        "order": 1,
+        "text": "Clima",
+        "type": "combo",
+        "value": "auto",
+        "options": [
+          {
+            "label": "Real, según tu ciudad",
+            "value": "auto"
+          },
+          {
+            "label": "Despejado",
+            "value": "despejado"
+          },
+          {
+            "label": "Nublado",
+            "value": "nublado"
+          },
+          {
+            "label": "Lluvia",
+            "value": "lluvia"
+          },
+          {
+            "label": "Tormenta",
+            "value": "tormenta"
+          },
+          {
+            "label": "Nieve",
+            "value": "nieve"
+          },
+          {
+            "label": "Niebla",
+            "value": "niebla"
+          }
+        ]
+      },
+      "hora": {
+        "order": 2,
+        "text": "Hora del día",
+        "type": "combo",
+        "value": "real",
+        "options": [
+          {
+            "label": "Real",
+            "value": "real"
+          },
+          {
+            "label": "Siempre mañana",
+            "value": "amanecer"
+          },
+          {
+            "label": "Siempre de día",
+            "value": "dia"
+          },
+          {
+            "label": "Siempre atardecer",
+            "value": "atardecer"
+          },
+          {
+            "label": "Siempre de noche",
+            "value": "noche"
+          }
+        ]
+      },
+      "gato": {
+        "order": 3,
+        "text": "Gato",
+        "type": "combo",
+        "value": "naranja",
+        "options": [
+          {
+            "label": "Naranja",
+            "value": "naranja"
+          },
+          {
+            "label": "Negro",
+            "value": "negro"
+          },
+          {
+            "label": "Gris",
+            "value": "gris"
+          },
+          {
+            "label": "Blanco",
+            "value": "blanco"
+          },
+          {
+            "label": "Siamés",
+            "value": "siames"
+          }
+        ]
+      },
+      "nombregato": {
+        "order": 4,
+        "text": "Nombre del gato",
+        "type": "textinput",
+        "value": "Michi"
+      },
+      "colorbuzo": {
+        "order": 5,
+        "text": "Color del buzo",
+        "type": "color",
+        "value": "0.878 0.478 0.373"
+      },
+      "luces": {
+        "order": 6,
+        "text": "Color de las luces",
+        "type": "combo",
+        "value": "portada",
+        "options": [
+          {
+            "label": "Según la portada de la canción",
+            "value": "portada"
+          },
+          {
+            "label": "Arcoíris",
+            "value": "arcoiris"
+          },
+          {
+            "label": "Un color fijo",
+            "value": "fijo"
+          }
+        ]
+      },
+      "colorluces": {
+        "order": 7,
+        "text": "Color fijo de las luces",
+        "type": "color",
+        "value": "1 0.416 0.835",
+        "condition": "luces.value == 'fijo'"
+      },
+      "info": {
+        "order": 8,
+        "text": "Mostrar hora, clima y canción",
+        "type": "bool",
+        "value": true
+      },
+      "h24": {
+        "order": 9,
+        "text": "Formato 24 horas",
+        "type": "bool",
+        "value": true,
+        "condition": "info.value == true"
+      },
+      "fahrenheit": {
+        "order": 10,
+        "text": "Temperatura en °F",
+        "type": "bool",
+        "value": false,
+        "condition": "info.value == true"
+      },
+      "sensibilidad": {
+        "order": 11,
+        "text": "Sensibilidad al audio",
+        "type": "slider",
+        "min": 2,
+        "max": 40,
+        "value": 10,
+        "editable": true
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14121f">
+<meta name="description" content="Un cuarto lofi en pixel art que vive con tu clima, tu hora y tu música. Wallpaper para Wallpaper Engine y Lively.">
+<title>cuartito</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #14121f; }
+  canvas { position: fixed; left: 0; top: 0; image-rendering: pixelated; image-rendering: crisp-edges; }
+  #demo {
+    position: fixed; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 2;
+    display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px;
+    max-width: calc(100vw - 32px); padding: 8px 10px; border-radius: 14px;
+    background: rgba(20, 18, 31, .82); color: #f3e9d2; backdrop-filter: blur(8px);
+    font: 13px/1.2 ui-monospace, "Cascadia Mono", Menlo, monospace;
+  }
+  #demo[hidden] { display: none; }
+  #demo .grupo { display: flex; gap: 4px; align-items: center; }
+  #demo .grupo + .grupo { padding-left: 8px; border-left: 1px solid rgba(255,255,255,.15); }
+  #demo button {
+    font: inherit; border: 0; border-radius: 8px; padding: 5px 8px; cursor: pointer;
+    background: rgba(255,255,255,.1); color: inherit;
+  }
+  #demo button[aria-pressed="true"] { background: #f3e9d2; color: #14121f; }
+  #demo a { color: #ffcf7a; padding: 0 4px; }
+  @media (max-width: 600px) { #demo { font-size: 12px; } #demo .grupo + .grupo { border-left: 0; padding-left: 0; } }
+</style>
+</head>
+<body>
+<canvas id="cuarto" aria-label="Un cuarto en pixel art con una persona escuchando música en la compu y un gato en la ventana"></canvas>
+<div id="demo" hidden>
+  <div class="grupo" data-grupo="clima">
+    <button data-v="auto">Clima real</button><button data-v="despejado">Sol</button><button data-v="nublado">Nubes</button>
+    <button data-v="lluvia">Lluvia</button><button data-v="tormenta">Tormenta</button><button data-v="nieve">Nieve</button>
+  </div>
+  <div class="grupo" data-grupo="hora">
+    <button data-v="real">Hora real</button><button data-v="amanecer">Mañana</button><button data-v="dia">Día</button>
+    <button data-v="atardecer">Tarde</button><button data-v="noche">Noche</button>
+  </div>
+  <div class="grupo">
+    <button id="demo-musica" aria-pressed="true">♪ Música</button><button id="demo-gato">Gato ↻</button>
+    <a href="https://github.com/BriDemirci/cuartito">Descargar</a>
+  </div>
+</div>
+<script src="cuartito.js"></script>
+</body>
+</html>
